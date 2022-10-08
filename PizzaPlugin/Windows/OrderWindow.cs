@@ -8,7 +8,11 @@ using PizzaPlugin.API;
 namespace PizzaPlugin.Windows;
 
 public class OrderWindow : Window, IDisposable {
-    private Address address = new("3535 S Ball St", "Arlington", "Virginia", "22202", Country.UnitedStates,
+    private string Street = "";
+    private string City = "";
+    private string State = "";
+    private string Zip = "";
+    private Address address = new(Street, City, State, Zip, Country.UnitedStates,
         ServiceType.Delivery);
 
     private Store? store;
